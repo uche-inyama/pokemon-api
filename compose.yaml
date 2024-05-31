@@ -1,0 +1,33 @@
+version: '3.4'
+services:
+  server:
+    image: postgres
+    restart: always
+    user: postgres
+    secrets:
+      - db-password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=pokemon
+      - POSTGRES_PASSWORD=pa55word
+    ports:
+      - 5433:5432
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  pokemonapi:
+    build: .
+    ports:
+      - 5292:5292
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5292
+volumes:
+  postgres_data:
+secrets:
+  db-password:
+    file: db/password.txt

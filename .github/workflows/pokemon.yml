@@ -1,0 +1,26 @@
+name: Deploy pokemon API
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: []
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET 8.x
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+      - name: Install dependencies
+        run: dotnet restore ./pokemonapi/pokemonapicsproj
+      - name: Build
+        run: dotnet build ./pokemonapi/pokemonapicsproj --configuration Release --no-restore
+
+      - name: Test with the dotnet CLI
+        run: dotnet test
+        # publish
+      - name: publish
+        run: dotnet publish ./pokemonapi/pokemonapicsproj --configuration Release --output ./publish
