@@ -14,12 +14,12 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Install dependencies
-        run: dotnet restore ./pokemonapi/pokemonapi.csproj
+        run: dotnet restore 
       - name: Build
-        run: dotnet build ./pokemonapi/pokemonapi.csproj --configuration Release --no-restore
+        run: dotnet build --configuration Release --no-restore
 
       - name: Test with the dotnet CLI
         run: dotnet test
         # publish
       - name: publish
-        run: dotnet publish ./pokemonapi/pokemonapi.csproj --configuration Release --output ./publish
+        run: dotnet publish --configuration Release --output ./publish
