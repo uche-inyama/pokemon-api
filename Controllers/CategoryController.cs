@@ -6,7 +6,6 @@ using pokemonapi.Models;
 
 namespace pokemonapi.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
     public class CategoryController : Controller

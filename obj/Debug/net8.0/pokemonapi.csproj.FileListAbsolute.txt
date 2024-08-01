@@ -225,3 +225,6 @@ C:\Users\okech\csharp\pokemonapi\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio
 C:\Users\okech\csharp\pokemonapi\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\okech\csharp\pokemonapi\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\okech\csharp\pokemonapi\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\okech\csharp\pokemonapi\bin\Debug\net8.0\pokemonapi.tests\obj\pokemonapi.tests.csproj.nuget.dgspec.json
+C:\Users\okech\csharp\pokemonapi\bin\Debug\net8.0\pokemonapi.tests\obj\project.assets.json
+C:\Users\okech\csharp\pokemonapi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll

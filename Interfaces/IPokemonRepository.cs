@@ -12,7 +12,6 @@ namespace pokemonapi.Interfaces
         Pokemon GetPokemonTrimToUpper(PokemonDTO pokemonCreate);      
         bool DeletePokemon(Pokemon pokemon);
         bool PokemonExists(int id);
-        bool Save();
-    
+        bool Save() ;
   }
 }

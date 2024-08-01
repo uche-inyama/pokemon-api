@@ -1,3 +1,4 @@
+using pokemonapi.DTO;
 using pokemonapi.Models;
 
 namespace pokemonapi.Interfaces
@@ -12,5 +13,5 @@ namespace pokemonapi.Interfaces
         bool UpdateCategory(Category category);
         bool DeleteCategory(Category category);
         bool Save();
-    }
+  }
 }

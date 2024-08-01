@@ -1,22 +1,23 @@
+using System;
+using pokemonapi.Repositories;
 using AutoMapper;
 using FakeItEasy;
+using FluentAssertions;
 using pokemonapi.Interfaces;
-using pokemonapi.Models;
 
-namespace pokemonapi.Tests.Controller 
+namespace pokemonapi.tests
 {
-  public class OwnerController
+  public class OwnerControllerTests 
   {
-    private readonly IMapper _mapper;
     private readonly IOwnerRepository _ownerRepository;
-
     private readonly ICountryRepository _countryRepository;
+    private readonly IMapper _mapper;
 
-    public OwnerController()
+    public OwnerControllerTests()
     {
-      _mapper = A.Fake<IMapper>();
       _ownerRepository = A.Fake<IOwnerRepository>();
       _countryRepository = A.Fake<ICountryRepository>();
+      _mapper = A.Fake<IMapper>();
     }
   }
 }
